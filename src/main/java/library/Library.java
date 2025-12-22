@@ -109,4 +109,11 @@ public class Library {
     public void printOperationLog() {
         operationLog.printLog();
     }
+    public String getStatistics() {
+        int total = books.size();
+        int available = (int) books.stream().filter(Book::isAvailable).count();
+        int borrowed = total - available;
+        return String.format("Статистика: Всего: %d, Доступно: %d, Выдано: %d",
+                total, available, borrowed);
+    }
 }
