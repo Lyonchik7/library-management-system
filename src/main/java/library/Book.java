@@ -47,10 +47,12 @@ public class Book {
 
     @Override
     public String toString() {
-        String status = available ? "Доступна" : "Выдана";
-
-
-         return "[ID: " + id + "] \"" + title + "\" – " + author + 
-           " (" + year + ")\nISBN: " + isbn + " | Статус: " + status;
+       if (available) {
+        return "[ID: " + id + "] \"" + title + "\" – " + author + 
+               " (" + year + ")\nISBN: " + isbn + " | Статус: Доступна";
+    } else {
+        return "[ID: " + id + "] \"" + title + "\" – " + author + 
+               " (" + year + ")\nISBN: " + isbn + " | Статус: Забрали";
+    }
     }
 }
