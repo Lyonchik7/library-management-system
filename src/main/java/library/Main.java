@@ -4,12 +4,20 @@ public class Main {
     public static void main(String[] args) {
         Library library = new Library();
 
-        library.addBook(new Book(1, "Война и мир", 
-                "Л.Н. Толстой", 1869, "978-5-17-090335-2"));
-        library.addBook(new Book(2, "Преступление и наказание", 
-                "Ф.М. Достоевский", 1866, "978-5-17-090336-9"));
-        library.addBook(new Book(3, "Анна Каренина", 
-                "Л.Н. Толстой", 1877, "978-5-17-090337-6"));
+        // Создаём книги отдельно в переменные
+        Book book1 = new Book(1, "Война и мир", 
+                "Л.Н. Толстой", 1869, "978-5-17-090335-2");
+        
+        Book book2 = new Book(2, "Мастер и Маргарита", 
+                "М.А. Булгаков", 1967, "978-5-17-088818-5");
+        
+        Book book3 = new Book(3, "1984", 
+                "Джордж Оруэлл", 1949, "978-5-17-099018-5");
+
+        // Добавляем книги в библиотеку
+        library.addBook(book1);
+        library.addBook(book2);
+        library.addBook(book3);
 
         System.out.println("ВЫПОЛНЕНИЕ ПРОГРАММЫ");
         
@@ -17,7 +25,9 @@ public class Main {
         library.borrowBook(1);
         
         System.out.println("\n2. Доступные книги:");
-        library.getAvailableBooks().forEach(b -> System.out.println(b.getTitle()));
+        for (Book book : library.getAvailableBooks()) {
+            System.out.println(book.getTitle());
+        }
         
         System.out.println("\n3. Возврат книги ID: 1");
         library.returnBook(1);
