@@ -4,7 +4,8 @@ public class Main {
     public static void main(String[] args) {
         Library library = new Library();
 
-        // Создаём книги отдельно в переменные
+
+        
         Book book1 = new Book(1, "Война и мир", 
                 "Л.Н. Толстой", 1869, "978-5-17-090335-2");
         
