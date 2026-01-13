@@ -11,7 +11,7 @@ public class Main {
         library.addBook(new Book(3, "Анна Каренина", 
                 "Л.Н. Толстой", 1877, "978-5-17-090337-6"));
 
-        System.out.println("=== ДЕМОНСТРАЦИЯ ===");
+        System.out.println("ВЫПОЛНЕНИЕ ПРОГРАММЫ");
         
         System.out.println("\n1. Выдача книги ID: 1");
         library.borrowBook(1);
