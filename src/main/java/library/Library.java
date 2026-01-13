@@ -22,7 +22,7 @@ public class Library {
             entries.add("[" + time + "] " + operation + " - " + description);
         }
         
-        // Метод печати журнала
+        // Метод для журнала
         public void printLog() {
             if (entries.isEmpty()) {
                 System.out.println("Журнал операций пуст.");
