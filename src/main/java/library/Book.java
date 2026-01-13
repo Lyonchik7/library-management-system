@@ -45,14 +45,4 @@ public class Book {
         this.available = available;
     }
 
-  @Override
-    public String toString() {
-       if (available) {
-        return "[ID: " + id + "] \"" + title + "\" – " + author + 
-               " (" + year + ")\nISBN: " + isbn + " | Статус: Доступна";
-    } else {
-        return "[ID: " + id + "] \"" + title + "\" – " + author + 
-               " (" + year + ")\nISBN: " + isbn + " | Статус: Забрали";
-    }
-    }
 }
