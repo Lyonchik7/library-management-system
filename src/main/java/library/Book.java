@@ -48,7 +48,9 @@ public class Book {
     @Override
     public String toString() {
         String status = available ? "Доступна" : "Выдана";
-        return String.format("[ID: %d] \"%s\" – %s (%d)\nISBN: %s | Статус: %s",
-                id, title, author, year, isbn, status);
+
+
+         return "[ID: " + id + "] \"" + title + "\" – " + author + 
+           " (" + year + ")\nISBN: " + isbn + " | Статус: " + status;
     }
 }
